@@ -14,3 +14,12 @@ body{
 	color: white;
 	
 }
+	
+.banner2{
+	width:100%;
+	padding: 250px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	
+}
