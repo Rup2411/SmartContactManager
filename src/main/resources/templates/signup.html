@@ -6,7 +6,69 @@
 	</head>
 	<body>
 		<section>
-			<h1>This is Signup Page</h1>
+			<div class="container">
+				
+				<div class="row">
+					
+					<div class="col-md-6 offset-md-3">
+						
+						<div class="my-card mt-3">
+							
+							<img style="width: 60px;" src="" th:src="@{/img/machine.png}" alt=""/>
+							
+							<h1 class="text-center">Create Account</h1>
+							
+							<form action="" th:action="@{/do_register}" method="post">
+								
+								<!-- name field -->
+								<div class="mb-3">
+									<label>First Name</label> 
+									<input type="text" name="firstName" class="form-control" placeholder="Enter First Name" required>
+								</div>
+								
+								<div class="mb-3">
+									<label>Last Name</label> 
+									<input type="text" name="lastName" class="form-control" placeholder="Enter Last Name" required>
+								</div>
+								
+								<div class="mb-3">
+									<label>Email</label> 
+									<input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+								</div>
+								
+								<div class="mb-3">
+									<label>Contact Number</label> 
+									<input type="number" name="mobileNo" class="form-control" placeholder="Enter Contact Number" required>
+								</div>
+								
+								<div class="mb-3">
+									<label>Password</label>
+									<input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+								</div>
+								
+								<div class="form-group">
+									<label>About</label>
+									<textarea type="text" name="about" rows="5" class="form-control" placeholder="Write Something About Yourself"></textarea>
+								</div>
+								
+								<div  class="container text-center mt-2">
+									
+									<button type="submit" class="btn bg-primary text white">Submit</button>
+									
+									<button type="reset" class="btn btn-warning text white">Reset</button>
+									
+								</div>
+								
+								</div>
+							</form>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
 		</section>
 	</body>
 </html>

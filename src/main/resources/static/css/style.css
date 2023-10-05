@@ -23,3 +23,8 @@ body{
 	justify-content: center;
 	
 }
+
+.my-card{
+	padding: 20px;
+	background: #FFFFFF;
+}
