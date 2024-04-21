@@ -12,6 +12,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,18 +30,24 @@ public class UserEntity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int userId;
 	
+	@NotBlank(message = "First Name Cannot be Blank")
 	@Column(name = "first_name", nullable = false, length = 255)
 	private String firstName;
 	
+	@NotBlank(message = "Last Name Cannot be Blank")
 	@Column(name = "last_name", nullable = false, length = 255)
 	private String lastName;
 	
+	@NotNull(message = "Phone Number Cannot be Blank")
+	@Size(min = 10, max = 10, message = "Please Provide a Valid Phone Number")
 	@Column(name = "phone_number", nullable = false, length = 255)
 	private String phoneNumber;
 	
+	@Email(message = "Email Is Mandatory Field")
 	@Column(unique = true, name = "email", nullable = false, length = 255)
 	private String email;
 	
+	@NotNull(message = "Password Cannot be Null")
 	@Column(name = "password", nullable = false, length = 255)
 	private String password;
 	
